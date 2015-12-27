@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let revealController = self.revealViewController()
+        revealController.tapGestureRecognizer()
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
